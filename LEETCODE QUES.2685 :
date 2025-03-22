@@ -1,4 +1,4 @@
-LEETCODE QUES.2685 : Count the number of complete components of a graph problem 
+Count the number of complete components of a graph problem 
 we have given an graph with n vertices and an array as 'edges' which contains subarrays of connected edges . we have to find the no. of complete subgraphs in the given graph.
 the topics it includes are: DSU,DFS,BFS 
 I had solved this using dfs. The code is here:
