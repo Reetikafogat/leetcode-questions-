@@ -1,0 +1,35 @@
+REVERSE VOWELS OF A STRING
+
+Given a string s, reverse only all the vowels in the string and return it.
+The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
+Example 1:
+Input: s = "IceCreAm"
+Output: "AceCreIm"
+Explanation:
+The vowels in s are ['I', 'e', 'e', 'A']. On reversing the vowels, s becomes "AceCreIm".
+
+CODE:
+class Solution(object):
+    def reverseVowels(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        lit=['a','e','i','o','u','A','E','I','O','U']
+        s=list(s)
+        i=0
+        j=len(s)-1
+
+        while(i<j):
+            if s[i] in lit and s[j] in lit:
+                temp=s[i]
+                s[i]=s[j]
+                s[j]=temp
+                i+=1
+                j-=1
+            if s[i] not in lit:
+                i+=1
+            if s[j] not in lit:
+                j-=1
+
+        return ''.join(s)       
